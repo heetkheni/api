@@ -2,14 +2,16 @@ from flask import Flask,jsonify
 
 app = Flask(__name__)
 
-place = [
+places=[
     {
-        'palace':"surat",
+        'places':'surat',
+        'id':'1'
     }
 ]
-@app.route('/')
-def hello_world():
-    return 'hello'
+
+@app.route('/',methods=['GET'])
+def get():
+    return jsonify({'places':places})
 
 if __name__=="__main__":
     app.run(debug=True)
