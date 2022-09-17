@@ -11,7 +11,7 @@ places=[
     }
 ]
 
-@app.route('/',methods=['GET','POST'])
+@app.route('/')
 def index():
     return json.dumps(places[0])
 
