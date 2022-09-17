@@ -9,7 +9,7 @@ places=[
     }
 ]
 
-@app.route('/',methods=['GET'])
+@app.route('/',methods=['GET','POST'])
 def get():
     return jsonify({'places':places})
 
